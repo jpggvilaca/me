@@ -5,20 +5,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var coffee = require('gulp-coffee');
 var sass = require('gulp-sass');
 
-
-gulp.task('default', function() {
-  return gulp.src('src/app.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist'));
-});
-
 gulp.task('webserver', function() {
-  gulp.src('app')
+  gulp.src('./')
     .pipe(webserver({
-      livereload: true,
+      livereload: false,
       directoryListing: false,
       open: false,
       port: 3500
@@ -26,17 +16,32 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('coffee', function() {
-  gulp.src('./src/*.coffee')
-    .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(gulp.dest('./public/'))
+	gulp.src('source/javascript/*.coffee')
+		.pipe(coffee({bare: true}).on('error', gutil.log))
+		.pipe(gulp.dest('public/assets/javascript'))
+});
+
+gulp.task('prefixer', function() {
+  return gulp.src('source/scss/styles.scss')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('source/scss/'));
 });
 
 gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+	gulp.src('source/scss/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('public/assets/stylesheets'));
 });
  
-gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+gulp.task('watch', function () {
+	gulp.watch('source/javascript/**/*.js', ['coffee']);
+ 	gulp.watch('source/scss/**/*.scss', ['sass']);
 });
+
+// Main tasks (which runs everything)
+
+gulp.task('default', ['sass', 'watch' , 'prefixer', 'coffee', 'webserver']);
+//gulp.task('dist', ['scripts', 'styles', 'riot-gulp', 'minify-html']);
