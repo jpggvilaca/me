@@ -4,6 +4,10 @@ var webserver = require('gulp-webserver');
 var autoprefixer = require('gulp-autoprefixer');
 var coffee = require('gulp-coffee');
 var sass = require('gulp-sass');
+var minifyCss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
+
+// Default
 
 gulp.task('webserver', function() {
   gulp.src('./')
@@ -41,7 +45,21 @@ gulp.task('watch', function () {
  	gulp.watch('source/scss/**/*.scss', ['sass']);
 });
 
+// Dist
+
+gulp.task('minify-css', function() {
+  return gulp.src('public/assets/stylesheets/*.css')
+    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('compress', function() {
+  return gulp.src('public/assets/javascript/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+
 // Main tasks (which runs everything)
 
 gulp.task('default', ['sass', 'watch' , 'prefixer', 'coffee', 'webserver']);
-//gulp.task('dist', ['scripts', 'styles', 'riot-gulp', 'minify-html']);
+gulp.task('dist', ['minify-css', 'compress']);
