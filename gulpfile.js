@@ -6,9 +6,11 @@ var coffee = require('gulp-coffee');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var Imagemin = require('imagemin');
 
 // Default
 
+// Boots up the server
 gulp.task('webserver', function() {
   gulp.src('./')
     .pipe(webserver({
@@ -19,6 +21,8 @@ gulp.task('webserver', function() {
     }));
 });
 
+
+// Converts coffee to js
 gulp.task('coffee', function() {
 	gulp.src('source/javascript/*.coffee')
 		.pipe(coffee({bare: true}).on('error', gutil.log))
@@ -34,16 +38,32 @@ gulp.task('prefixer', function() {
         .pipe(gulp.dest('source/scss/'));
 });
 
+
+// Converts scss to css
 gulp.task('sass', function () {
 	gulp.src('source/scss/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('public/assets/stylesheets'));
 });
  
+
+ // Watch for file changes
 gulp.task('watch', function () {
 	gulp.watch('source/javascript/**/*.js', ['coffee']);
  	gulp.watch('source/scss/**/*.scss', ['sass']);
 });
+
+
+// Minifies images
+new Imagemin()
+    .src('source/assets/images/*.{gif,jpg,png,svg}')
+    .dest('public/assets/images')
+    .use(Imagemin.jpegtran({progressive: true}))
+    .run(function (err, files) {
+        console.log(files[0]);
+        // => {path: 'build/images/foo.jpg', contents: <Buffer 89 50 4e ...>}
+    });
+
 
 // Dist
 
