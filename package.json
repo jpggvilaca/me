@@ -7,20 +7,23 @@
     "type": "git",
     "url": "https://github.com/jpggvilaca/jpggvilaca.github.io"
   },
-  "author": "Joao Vilaca",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jpggvilaca/jpggvilaca.github.io/issues"
+  "scripts": {
+    "start": "gulp",
+    "build": "rm -rf dist; gulp dist"
   },
-  "homepage": "https://github.com/jpggvilaca/jpggvilaca.github.io",
+  "author": "João Vilaça",
+  "license": "ISC",
+  "homepage": "http://jpggvilaca.github.io",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
-    "gulp-coffee": "^2.3.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-htmlmin": "^2.0.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.1",
     "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.9",
     "gulp-webserver": "^0.9.1",
     "imagemin": "^3.2.0"
   }
