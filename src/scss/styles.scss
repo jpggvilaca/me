@@ -14,8 +14,8 @@ article {
   text-align: center;
 
   @media (max-width: 640px) {
-    padding: 20px;
     margin: 0;
+    padding: 20px;
   }
 }
 
@@ -32,7 +32,7 @@ ul {
 h1,
 h2,
 p {
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   margin: 0;
 }
 
@@ -42,26 +42,28 @@ a {
 }
 
 header {
+  -ms-flex-pack: center;
+  -ms-flex-pack: justify;
   background-color: #474747;
   color: #fff;
-  -ms-flex-pack: justify;
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
 }
 
 .introduction article {
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  align-items: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  align-items: center;
 
   .avatar {
     background-image: url('../assets/images/avatar.jpg');
     background-position: 50% 20%;
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 100%;
     border-radius: 50%;
     height: 170px;
     width: 170px;
@@ -72,8 +74,8 @@ header {
   }
 
   p {
-    max-width: 50%;
     line-height: 1.2rem;
+    max-width: 50%;
 
     @media (max-width: 640px) {
       max-width: 90%;
@@ -86,9 +88,9 @@ header {
   color: #fff;
 
   article {
-    @media (max-width: 640px) {
-      text-align: left;
+    @media (max-width: 740px) {
       padding: 10px;
+      text-align: left;
     }
   }
 
@@ -101,12 +103,23 @@ header {
     column-count: 3;
     margin-top: 20px;
 
-    @media (max-width: 640px) {
-      column-count: 2;
+    li.sub-header {
+      background-color: #fff;
+      color: #474747;
+      font-size: 18px;
+      letter-spacing: .05em;
+    }
 
-      li {
-        line-height: 1.2rem;
-        font-size: 14px;
+    @media (max-width: 740px) {
+      -moz-column-count: 1;
+      column-count: 1;
+
+      li.sub-header {
+        margin-top: 20px;
+      }
+
+      li:first-child {
+        margin-top: 0;
       }
     }
   }
@@ -117,7 +130,7 @@ header {
     text-align: center;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 740px) {
     article {
       padding: 10px;
     }

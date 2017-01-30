@@ -12,8 +12,8 @@ article {
   text-align: center; }
   @media (max-width: 640px) {
     article {
-      padding: 20px;
-      margin: 0; } }
+      margin: 0;
+      padding: 20px; } }
 
 ul {
   list-style-type: none;
@@ -25,7 +25,7 @@ ul {
 h1,
 h2,
 p {
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   margin: 0; }
 
 a {
@@ -33,32 +33,34 @@ a {
   text-decoration: none; }
 
 header {
+  -ms-flex-pack: center;
+  -ms-flex-pack: justify;
   background-color: #474747;
   color: #fff;
-  -ms-flex-pack: justify;
   display: -ms-flexbox;
   display: flex;
   justify-content: center; }
 
 .introduction article {
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  align-items: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
   .introduction article .avatar {
     background-image: url("../assets/images/avatar.jpg");
     background-position: 50% 20%;
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 100%;
     border-radius: 50%;
     height: 170px;
     width: 170px; }
     .introduction article .avatar + p {
       margin: 20px 0; }
   .introduction article p {
-    max-width: 50%;
-    line-height: 1.2rem; }
+    line-height: 1.2rem;
+    max-width: 50%; }
     @media (max-width: 640px) {
       .introduction article p {
         max-width: 90%; } }
@@ -66,26 +68,33 @@ header {
 .skills {
   background-color: #474747;
   color: #fff; }
-  @media (max-width: 640px) {
+  @media (max-width: 740px) {
     .skills article {
-      text-align: left;
-      padding: 10px; } }
+      padding: 10px;
+      text-align: left; } }
   .skills h2 {
     width: 100%; }
   .skills ul {
     -moz-column-count: 3;
     column-count: 3;
     margin-top: 20px; }
-    @media (max-width: 640px) {
+    .skills ul li.sub-header {
+      background-color: #fff;
+      color: #474747;
+      font-size: 18px;
+      letter-spacing: .05em; }
+    @media (max-width: 740px) {
       .skills ul {
-        column-count: 2; }
-        .skills ul li {
-          line-height: 1.2rem;
-          font-size: 14px; } }
+        -moz-column-count: 1;
+        column-count: 1; }
+        .skills ul li.sub-header {
+          margin-top: 20px; }
+        .skills ul li:first-child {
+          margin-top: 0; } }
 
 .contacts ul {
   text-align: center; }
 
-@media (max-width: 640px) {
+@media (max-width: 740px) {
   .contacts article {
     padding: 10px; } }
