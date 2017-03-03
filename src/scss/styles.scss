@@ -41,6 +41,39 @@ a {
   text-decoration: none;
 }
 
+.github-area {
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+  border-width: 0 80px 80px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  @media (max-width: 640px) { display: none; }
+}
+
+.github-icon {
+  background-image: url('../assets/images/GitHub-Mark-64px.png');
+  background-position: center;
+  background-size: cover;
+  height: 32px;
+  opacity: .78;
+  position: fixed;
+  right: 8px;
+  top: 8px;
+  transition: opacity .3s ease-in-out;
+  width: 32px;
+  will-change: opacity;
+  z-index: 2;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  @media (max-width: 640px) { display: none; }
+}
+
 header {
   -ms-flex-pack: center;
   -ms-flex-pack: justify;
