@@ -1,10 +1,10 @@
-var autoprefixer = require('gulp-autoprefixer');
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var cleanCSS = require('gulp-clean-css');
-var sass = require('gulp-sass');
-var webserver = require('gulp-webserver');
-var watch = require('gulp-watch');
+const autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const cleanCSS = require('gulp-clean-css');
+const sass = require('gulp-sass');
+const webserver = require('gulp-webserver');
+const watch = require('gulp-watch');
 
 // --- Default --- \\
 gulp.task('webserver', function() {
@@ -49,5 +49,5 @@ gulp.task('minify-html', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass', 'prefixer', 'webserver', 'sass:watch']);
-gulp.task('dist', ['sass', 'minify-css', 'minify-html']);
+gulp.task('default', gulp.series(['sass', 'prefixer', 'webserver', 'sass:watch']));
+gulp.task('dist', gulp.series(['sass', 'minify-css', 'minify-html']));

@@ -132,7 +132,6 @@ header {
   }
 
   ul {
-    -moz-column-count: 3;
     column-count: 3;
     margin-top: 20px;
 
@@ -144,7 +143,6 @@ header {
     }
 
     @media (max-width: 740px) {
-      -moz-column-count: 1;
       column-count: 1;
 
       li.sub-header {

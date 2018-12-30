@@ -15,7 +15,7 @@
   "license": "ISC",
   "homepage": "http://jpggvilaca.github.io",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-clean-css": "^2.0.12",
     "gulp-htmlmin": "^2.0.0",
@@ -25,6 +25,6 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.9",
     "gulp-webserver": "^0.9.1",
-    "imagemin": "^3.2.0"
+    "imagemin": "^6.1.0"
   }
 }
