@@ -1,8 +1,8 @@
 {
-  "name": "jpggvilaca.github.io",
+  "name": "me",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://jpggvilaca.github.io/jpggvilaca.github.io",
+  "homepage": "https://jpggvilaca.github.io/me",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
