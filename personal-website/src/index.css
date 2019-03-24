@@ -16,7 +16,8 @@ body {
 
 body,
 p,
-ul {
+ul,
+h5 {
   margin: 0;
   padding: 0;
 }
@@ -34,63 +35,4 @@ main {
   max-width: 580px;
   margin: 80px auto 50px;
   height: calc(100vh - 230px);
-}
-
-.about {
-  background-color: #212121;
-  border-radius: 15px;
-  padding: 30px 28px;
-  margin-bottom: 84px;
-}
-
-.intro {
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-}
-
-.avatar {
-  background-image: url(./avatar.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  height: 120px;
-  margin-right: 30px;
-  width: 120px;
-}
-
-.name {
-  flex-grow: 1;
-}
-
-.name p {
-  font-size: 24px;
-}
-
-.name p + p {
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 12px;
-}
-
-.contact {
-  background-color: #383838;
-  border-radius: 15px;
-  width: 68px;
-  height: 120px;
-}
-
-footer {
-  align-items: center;
-  background-color: #212121;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  height: 100px;
-  justify-content: center;
-}
-
-footer p {
-  color: rgba(255, 255, 255, 0.7);
 }

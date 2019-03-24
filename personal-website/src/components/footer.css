@@ -1,0 +1,12 @@
+footer {
+  align-items: center;
+  background-color: #212121;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
