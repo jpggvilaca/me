@@ -59,3 +59,11 @@
   height: 1px;
   margin: 4px 0;
 }
+
+.description p {
+  line-height: 28px;
+}
+
+.description p + p {
+  margin-top: 16px;
+}

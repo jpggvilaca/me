@@ -17,14 +17,25 @@ body {
 body,
 p,
 ul,
-h5 {
+h4,
+h5,
+li {
   margin: 0;
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   color: #ff5e5e;
+  transition: .3s color ease-in-out;
   text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255, 94, 94, .68);
 }
 
 p {
@@ -34,5 +45,4 @@ p {
 main {
   max-width: 580px;
   margin: 80px auto 50px;
-  height: calc(100vh - 230px);
 }
