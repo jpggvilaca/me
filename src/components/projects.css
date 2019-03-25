@@ -13,7 +13,7 @@
 .card {
   background-color: #212121;
   border-radius: 15px;
-  flex: 0 1 calc(50% - 30px);
+  flex: 1 0 calc(50% - 30px);
   margin: 15px 0;
   padding: 24px 20px;
 }
@@ -31,8 +31,8 @@
 }
 
 .card-description {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 14px;
