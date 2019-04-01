@@ -37,6 +37,7 @@
   line-height: 24px;
   margin-bottom: 14px;
   margin-top: 8px;
+  min-height: 150px;
   opacity: 1;
   padding: 14px 0;
 }
