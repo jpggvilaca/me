@@ -58,6 +58,7 @@
   display: block;
   height: 1px;
   margin: 4px 0;
+  width: 100%;
 }
 
 .description p {
@@ -66,4 +67,56 @@
 
 .description p + p {
   margin-top: 16px;
+}
+
+/*
+  Mobile styles
+*/
+
+@media (max-width: 640px) {
+  .about {
+    max-width: 480px;
+    margin: 0 auto 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 15px 14px;
+  }
+
+  .intro {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .avatar {
+    height: 70px;
+    margin-right: 15px;
+    width: 70px;
+  }
+
+  .name p {
+    font-size: 16px;
+  }
+
+  .contact {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    height: auto;
+    justify-content: center;
+    padding: 5px;
+    width: 40px;
+  }
+
+  .contact .image {
+    height: 24px;
+    width: 24px;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
 }

@@ -41,3 +41,42 @@
   opacity: 1;
   padding: 14px 0;
 }
+
+@media (max-width: 640px) {
+  .projects {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .card {
+    flex: 1 0 100%;
+    margin: 7px 0;
+    padding: 16px 12px;
+  }
+
+  .card-description {
+    min-height: 80px;
+  }
+
+  .card.odd,
+  .card.even {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .card h4 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card a {
+    font-size: 14px;
+  }
+}

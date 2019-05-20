@@ -10,3 +10,13 @@ footer {
 footer p {
   color: rgba(255, 255, 255, 0.7);
 }
+
+@media (max-width: 480px) {
+  footer {
+    height: 40px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
