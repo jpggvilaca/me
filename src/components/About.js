@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GithubLogo from '../assets/GithubLogo';
-import LinkedLogo from '../assets/LinkedinLogo';
+import GithubLogo from './GithubLogo';
+import LinkedLogo from './LinkedinLogo';
 
 import './about.css';
 
@@ -9,9 +9,10 @@ const About = () => (
   <div className="about">
     <div className="intro">
       <div className="avatar"></div>
-      <div className="name">
-        <p>João Vilaça</p>
+      <div className="info">
+        <p className='name'>João Vilaça</p>
         <p>Software Engineer</p>
+        <p>AI Frameworks Engineer @ Intel Corporation</p>
       </div>
       <div className="contact">
         <a href="https://github.com/jpggvilaca" className="image">
@@ -29,9 +30,9 @@ const About = () => (
         and methodology.
       </p>
       <p>
-        With a Computer Science Degree and after being self-taught in web 
-        development for a year, I’ve been working professionally along a team 
-        of developers, designers and ux’ers to craft and perfect web applications.
+        After finishing my Computer Science Degree I decided to teach myself web 
+        development for a year. Since then, I've been working professionally with teams 
+        of developers, designers and ux'ers to craft and perfect web applications.
       </p>
     </div>
   </div>
