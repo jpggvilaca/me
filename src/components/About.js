@@ -12,7 +12,7 @@ const About = () => (
       <div className="info">
         <p className='name'>João Vilaça</p>
         <p>Software Engineer</p>
-        <p>AI Frameworks Engineer @ Intel Corporation</p>
+        <p>Frontend Team Lead @ Intel Corporation</p>
       </div>
       <div className="contact">
         <a href="https://github.com/jpggvilaca" className="image">
