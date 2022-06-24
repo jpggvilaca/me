@@ -1,0 +1,10 @@
+.articles {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .articles {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
